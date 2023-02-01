@@ -25,6 +25,7 @@ value, and handles the expected error output rather than crashing
     
     loop {
         println!("Please input your guess.");
+        
         let mut guess = String::new();
         
     io::stdin()
