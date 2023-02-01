@@ -1,7 +1,7 @@
 use std::io;
 use std::cmp::Ordering;
 use rand::Rng;
-// somehow, this works!
+// this works!
 fn main() 
 {
     println!("Guess the number!");
@@ -14,8 +14,11 @@ fn main()
         .read_line(&mut guess)
         .expect("Failed to read line");
 
-    let guess: u32 = guess.trim().parse().expect("Please type a number!");
-
+ /*
+replace the expect call with a match expression that returns an Ok or Err 
+value, and handles the expected error output rather than crashing
+*/
+    let guess: u32 = guess.trim().parse().expect("Please type a number!"); // add match here
     println!("You guessed: {guess}");
 
     println!("The secret number is: {secret_number}");
@@ -28,7 +31,7 @@ fn main()
         .read_line(&mut guess)
         .expect("Failed to read line");
 
-        let guess: u32 = guess.trim().parse().expect("Error-1!"); // converting the string to int worked!
+        let guess: u32 = guess.trim().parse().expect("Error-1!"); // add match here
 
         match guess.cmp(&secret_number) {
             Ordering::Less => {
