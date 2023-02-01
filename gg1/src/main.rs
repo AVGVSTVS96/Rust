@@ -20,7 +20,7 @@ fn main()
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
-        }; // changed this expression to a match
+        }; // changed this expression to a match expression
        
         println!("You guessed: {guess}");
 
