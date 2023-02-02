@@ -6,7 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # Send a request to the web page
-URL = '<http://rr-calendar.nycbar.org:8213/AVSchedule.aspx?curdate=02/02/2023>'
+URL = '<http://rr-calendar.nycbar.org:8213/AVSchedule.aspx?curdate=0>'
 response = requests.get(URL, timeout=10)
 
 # Parse the HTML content of the web page
@@ -30,3 +30,4 @@ for event in form.find_all('tr'):
 
 # Convert the event data to JSON format
 inperson_calendar = json.dumps(events)
+print(events)
