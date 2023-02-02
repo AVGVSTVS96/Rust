@@ -1,8 +1,11 @@
+""" string
+"""
+
 import requests
 from bs4 import BeautifulSoup
 
 # URL to scrape
-URL = "https://www.example.com/calendar"
+URL = "http://rr-calendar.nycbar.org:8213/AVSchedule.aspx?curdate=0"
 response = requests.get(URL, timeout=10)
 
 # Parse the HTML content of the page
