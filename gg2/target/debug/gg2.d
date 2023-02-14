@@ -1,1 +1,1 @@
-/workspaces/Rust/gg2/target/debug/gg2: /workspaces/Rust/gg2/src/main.rs
+/Users/bassimshahidy/PycharmProjects/Rust/gg2/target/debug/gg2: /Users/bassimshahidy/PycharmProjects/Rust/gg2/src/main.rs
