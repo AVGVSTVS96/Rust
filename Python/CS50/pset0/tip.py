@@ -10,11 +10,15 @@ def main():
 
 
 def dollars_to_float(d):
-    # TODO
+    fd = float(d.rstrip('$'))
+    fd = round(fd, 1)
+    return fd
 
 
 def percent_to_float(p):
-    # TODO
+    fp = float(p.rstrip('%'))
+    fp = fp/100
+    return fp
 
 
 main()
