@@ -1,7 +1,7 @@
 # implement a program that prompts the user
 # for the name of a variable in camel case
-#
-# and outputs the corresponding name in snake case
+# output the corresponding name in snake case
+
 import re
 
 
@@ -9,7 +9,7 @@ def main():
     camel = input("camelCase: ")
     snake = split_camel(camel)
     lower_snake = [word.lower() for word in snake]
-    print(lower_snake[0] + lower_snake[1])
+    print((lower_snake[0]) + "_" + (lower_snake[1]))
 
 
 def split_camel(string):
