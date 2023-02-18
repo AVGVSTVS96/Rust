@@ -9,7 +9,7 @@ def main():
     camel = input("camelCase: ")
     snake = split_camel(camel)
     lower_snake = [word.lower() for word in snake]
-    print((lower_snake[0]) + "_" + (lower_snake[1]))
+    print("_".join(lower_snake))
 
 
 def split_camel(string):
