@@ -10,7 +10,7 @@ def main():
     print(string)
 
 
-def remove_vowels(string):
+def remove_vowels(string: str) -> str:
     vowels = ["a", "e", "i", "o", "u"]
     for char in string:
         if char in vowels:
