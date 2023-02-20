@@ -5,7 +5,7 @@
 # print the string without vowels
 
 def main():
-    string = input("Input: ")
+    string: str = input("Input: ")
     string = remove_vowels(string)
     print(string)
 
