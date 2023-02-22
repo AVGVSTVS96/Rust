@@ -20,8 +20,12 @@ def main():
 def is_valid(s):
     if len(s) < 2 or len(s) > 6:
         return False
-    else:
+    elif not s[:2].isalpha():
+        return False
+    elif s.isalnum() and s[-2:].isdigit() or not s.isalnum():  # TODO needs fixing
         return True
+    else:
+        return False
 
 #    if s[:2].isdigit():
 #        return False
@@ -29,7 +33,8 @@ def is_valid(s):
 #        return True
 
 
-""" if s[:2].isalpha() and 2 <= len(s) <= 6:
+"""       *This code works*
+if s[:2].isalpha() and 2 <= len(s) <= 6:
     if len(s) > 2 and not s[:-2].isalpha():  
         return False                        
     return True
