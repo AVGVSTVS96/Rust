@@ -7,8 +7,6 @@
 """
 
 
-# TODO Stop punctuation marks from being allowed
-
 def main():
     plate = input("Plate: ")
     if is_valid(plate):
@@ -20,26 +18,22 @@ def main():
 def is_valid(s):
     if len(s) < 2 or len(s) > 6:
         return False
-    elif not s[:2].isalpha():
+    if not s[:2].isalpha():
         return False
-    elif s.isalnum() and s[-2:].isdigit() or not s.isalnum():  # TODO needs fixing
-        return True
+    if not s.isalnum():
+        return False
+    has_letters = any(c.isalpha() for c in s)
+    has_digits = any(c.isdigit() for c in s)
+    if has_digits and has_letters:
+        if s[-2:].isdigit() and s[-2] != "0":
+            return True
+        else:
+            return False
+    elif has_digits:
+        return False
     else:
-        return False
+        return True
 
-#    if s[:2].isdigit():
-#        return False
-#    if s.isalnum() and s[-2:].isdigit() or not s.isalnum():
-#        return True
-
-
-"""       *This code works*
-if s[:2].isalpha() and 2 <= len(s) <= 6:
-    if len(s) > 2 and not s[:-2].isalpha():  
-        return False                        
-    return True
-return False
-"""
 
 if __name__ == '__main__':
     main()
