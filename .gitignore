@@ -10,3 +10,8 @@
 .idea/vcs.xml
 .idea/workspace.xml
 gg2/target/.rustc_info.json
+poetry.lock
+pyproject.html
+replit.nix
+venv/
+.idea
