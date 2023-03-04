@@ -18,3 +18,16 @@ menu = {
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
+total = 0
+while True:
+    try:
+        item = input("Item: ").title()
+        if item not in menu:
+            continue
+        price = menu[item]
+        total = total + price
+        print(total)
+    except EOFError:
+        break
+
+print("$", round(total, 2), sep="")
