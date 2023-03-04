@@ -15,3 +15,4 @@ pyproject.html
 replit.nix
 venv/
 .idea
+gg2/target/.rustc_info.json
