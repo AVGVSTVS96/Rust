@@ -17,3 +17,4 @@ venv/
 .idea
 gg2/target/.rustc_info.json
 gg2/target/.rustc_info.json
+gg2/target/.rustc_info.json
