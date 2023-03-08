@@ -6,13 +6,19 @@ TODO Treat the user’s input case-insensitively.
 """
 
 # prompt for input
-items = ""
+items_count = {}
 while True:
     try:
-        items = input().upper()
+        item = input()
     except EOFError:
         break
+    else:
+        item = item.lower()
+        if item in items_count:
+            items_count[item] += 1
+        else:
+            items_count[item] = 1
 
-# print all uppercase
-for item in items:
-    print("")
+for item in sorted(items_count.keys()):
+    count = items_count[item]
+    print(f"{count} {item.upper()}")
