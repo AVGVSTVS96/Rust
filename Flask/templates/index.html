@@ -3,17 +3,34 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ title }}</title>
+    <title>Bassim's Site</title>
     <meta name="description" content="{{ description }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
   </head>
   <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
-      <h1 class="text-3xl font-bold mb-4">Welcome to my website!</h1>
-      <p class="text-xl mb-4">This is an example of using Tailwind CSS with Flask.</p>
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <h1 class="text-3xl font-bold mb-4">Hi, My Name is Bassim!</h1>
+      <p class="text-xl mb-4">This is the second iteration of my personal website!</p>
+      <h2 class="text-2xl font-bold mt-4 mb-2">About The website</h2>
+        <p class="text-lg mb-4">I built this website using Flask and TailwindCSS with the help of GPT-4. I had no prior web development experience.</p>
+      <button id="click-me" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Click me!
       </button>
+      <span id="counter-display" class="inline-block bg-gray-300 border border-gray-50 px-4 py-2 ml-2 rounded text-center">
+        0
+      </span>      
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('click-me');
+            const counterDisplay = document.getElementById('counter-display');
+            let counter = 0;
+
+            button.addEventListener('click', () => {
+                counter++;
+                counterDisplay.textContent = counter;
+            });
+        });
+    </script>  
   </body>
 </html>
