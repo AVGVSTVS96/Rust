@@ -9,28 +9,20 @@
         with Python, Flask, GPT-4, ChatGPT, Tailwind CSS, Cybersecurity, and Fraud Prevention">
     <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
   </head>
-  <body class="bg-mycustom-200 text-white">
-    <div class="h-2 bg-gradient-to-r from-violet-500 to-fuchsia-500 fixed top-0 left-0 right-0"></div>
-    <div class="container mx-auto px-4 py-8 text-center max-w-2xl">
-      <div class="p-1.5 border border-transparent bg-gradient-to-tr from-violet-500 to-fuchsia-500 rounded-lg">
-        <div class="content bg-mycustom-100 p-6 rounded-lg">
-          <h1 class="text-3xl font-bold mb-4">Hi, My Name is Bassim!</h1>
-          <p class="text-xl mb-4">This is the second iteration of my personal website!</p>
-          <h2 class="text-2xl font-bold mt-4 mb-2">About The Website TEST!</h2>
-          <p class="text-lg mb-4">I built this website using Flask and TailwindCSS. I added a counter button and 
-            a small JS script to increment the counter by 1 when the button is clicked. I also added 
-            a hover feature to the counter element, where if you hover your mouse over the counter 
-            element the color will change.
-          </p>
-          <button id="click-me" class="bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded">
-            Click me!
-          </button>
-          <span id="counter-display" class="inline-block bg-gray-400 hover:bg-slate-600 font-bold border-gray-50 px-4 py-2 ml-2 rounded text-center">
-            0
-          </span>
+  <body class="h-screen w-screen bg-mycustom-200">
+    <div class="h-1 bg-gradient-to-r from-violet-500 to-fuchsia-500"></div>
+    <div class="mx-auto max-w-2xl px-4 py-8 text-center text-white">
+      <div class="rounded-lg bg-gradient-to-tr from-violet-500 to-fuchsia-500 p-1.5">
+        <div class="content rounded-md bg-mycustom-100 p-6">
+          <h1 class="mb-4 text-3xl font-bold">Hi, My Name is Bassim!</h1>
+          <p class="mb-4 text-xl">This is the second iteration of my personal website!</p>
+          <h2 class="mt-4 mb-2 text-2xl font-bold">About The Website!</h2>
+          <p class="mb-4 text-lg">I built this website using Flask and TailwindCSS. I added a counter button and a small JS script to increment the counter by 1 when the button is clicked. I also added a hover feature to the counter element, where if you hover your mouse over the counter element the color will change.</p>
+          <button id="click-me" class="rounded bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700">Click me!</button>
+          <span id="counter-display" class="ml-2 inline-block rounded border-gray-50 bg-gray-300 px-4 py-2 text-center font-bold hover:bg-blue-400"> 0 </span>
         </div>
       </div>
-    </div>
+    </body>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const button = document.getElementById('click-me');
