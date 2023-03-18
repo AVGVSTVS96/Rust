@@ -2,7 +2,14 @@
 module.exports = {
   content: ['./templates/**/*.html'], // Add the paths to your HTML files
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        mycustom: {
+          100: '#191D43',
+          200: '#191D2D'
+        }
+      }
+    },
   },
   plugins: [],
 }
